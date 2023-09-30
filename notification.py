@@ -21,7 +21,7 @@ def enviar_log(datos_log):
     message['From'] = sender_email_address 
     message['To'] = receiver_email_address 
     # Set email body text 
-    message.set_content(f'Se ha detectado una solicitud inusual desde la ip: {datos_log["request"]["ip_address"]}') 
+    message.set_content(f'Se ha detectado una solicitud inusual desde la ip: {datos_log["request"]["ip_address"]} por favor revisa si fuiste tu') 
     # Set smtp server and port 
     server = smtplib.SMTP(email_smtp, '587') 
     # Identify this client to the SMTP server 
